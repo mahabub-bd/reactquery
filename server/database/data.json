@@ -1,29 +1,12 @@
 {
   "products": [
     {
-      "id": "1",
-      "title": "iPhone 9",
-      "description": "An apple mobile which is nothing like apple",
-      "price": 549,
-      "rating": 4.69,
-      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
-    },
-
-    {
       "id": "2",
       "title": "iPhone X",
       "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
       "price": 899,
       "rating": 4.44,
       "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
-    },
-    {
-      "id": "3",
-      "title": "Samsung Universe 9",
-      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-      "price": 1249,
-      "rating": 4.09,
-      "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
     },
     {
       "id": "4",
@@ -48,14 +31,6 @@
       "price": 1749,
       "rating": 4.57,
       "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
-    },
-    {
-      "id": "7",
-      "title": "Samsung Galaxy Book",
-      "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
-      "price": 1499,
-      "rating": 4.25,
-      "thumbnail": "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg"
     },
     {
       "id": "8",

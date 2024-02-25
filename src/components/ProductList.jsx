@@ -47,7 +47,7 @@ export default function ProductList({ onProductChange }) {
               />
               <div className="flex  items-center justify-around w-full">
                 <p className="text-lg my-3">{product.title}</p>
-                <p className="bg-rose-500 hover:bg-rose-700 text-white font-bold py-0.5 px-2 rounded">
+                <p className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-0.5 px-2 rounded">
                   Rating: {product.rating}
                 </p>
               </div>
@@ -56,7 +56,12 @@ export default function ProductList({ onProductChange }) {
                   onClick={() => handleDeleteProduct(product.id)}
                   className="bg-red-500 hover:bg-red-700 text-white font-bold py-0.5 px-2 rounded"
                 >
-                  Delete
+                  <img
+                    width="22"
+                    height="22"
+                    src="https://img.icons8.com/color/20/cancel--v1.png"
+                    alt="cancel--v1"
+                  />
                 </button>
                 <button
                   onClick={() => onProductChange(product.id)}
@@ -87,10 +92,10 @@ export default function ProductList({ onProductChange }) {
           </button>
         )}
       </div>
-      <p className="text-left w-full text-gray-800">
-        Total Products : {products.items}
-      </p>
-      <p className="text-right w-full text-gray-800">Page Number : {page}</p>
+      <div className="flex items-center justify-between w-full">
+        <p className=" text-gray-800">Total Products : {products.items}</p>
+        <p className=" text-gray-800">Page Number : {page}</p>
+      </div>
     </div>
   );
 }

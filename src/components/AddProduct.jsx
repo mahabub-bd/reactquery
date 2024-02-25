@@ -88,7 +88,7 @@ export default function AddProducts() {
 
         <button
           type="submit"
-          className="bg-black m-auto text-white text-md py-1 px-4 mt-5 rounded-md"
+          className="bg-black m-auto text-white text-md py-1 px-4 mt-5 rounded-md w-full"
         >
           Add Product
         </button>
