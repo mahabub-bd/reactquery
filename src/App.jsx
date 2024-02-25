@@ -4,7 +4,7 @@ import ProductDetails from "./components/ProductDetails";
 import ProductList from "./components/ProductList";
 
 function App() {
-  const [productId, setProductId] = useState(1);
+  const [productId, setProductId] = useState(6);
   const handleClick = (productId) => {
     setProductId(Number(productId));
   };

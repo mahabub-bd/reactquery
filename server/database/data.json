@@ -215,6 +215,30 @@
       "price": 30,
       "rating": 4.92,
       "thumbnail": "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg"
+    },
+    {
+      "id": "709be739-3fad-467e-bf1e-a98d1bc4653f",
+      "title": "MacBook Pro",
+      "description": "MacBook Pro",
+      "price": 1000,
+      "rating": 5,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
+    },
+    {
+      "id": "70810303-af4f-40cd-93ef-d5bc6530950e",
+      "title": "MacBook Pro",
+      "description": "MacBook Pro",
+      "price": 1000,
+      "rating": 5,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
+    },
+    {
+      "id": "2e8a47a0-eaed-4377-bc37-f51c4e31f6dc",
+      "title": "MacBook Pro",
+      "description": "MacBook Pro",
+      "price": 1000,
+      "rating": 5,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
     }
   ]
 }
