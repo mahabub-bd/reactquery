@@ -33,13 +33,14 @@ export default function ProductList({ onProductChange }) {
                 <p className="text-lg my-3">{product.title}</p>
                 <button
                   onClick={() => onProductChange(product.id)}
-                  className="text-sm my-3"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-0.5 px-2 rounded"
                 >
-                  Details
+                  Show Details
                 </button>
               </div>
             </li>
           ))}
+        .5
       </ul>
     </div>
   );

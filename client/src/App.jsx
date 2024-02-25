@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AddProducts from "./components/AddProduct";
 import ProductDetails from "./components/ProductDetails";
 import ProductList from "./components/ProductList";
 
@@ -9,6 +10,7 @@ function App() {
   };
   return (
     <div className="flex m-2">
+      <AddProducts />
       <ProductList onProductChange={handleClick} />
       <ProductDetails id={productId} />
     </div>
