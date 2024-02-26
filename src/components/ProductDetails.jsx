@@ -11,8 +11,19 @@ export default function ProductDetails({ id }) {
     queryFn: retriveProduct,
   });
 
-  if (isLoading) return <div>Fetching Product ...</div>;
-  if (error) return <div>An error occours : {error.message}</div>;
+  if (isLoading)
+    return (
+      <div className="text-2xl text-center w-1/2">
+        Fetching Product Details ...
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className=" text-2xl text-center  w-1/2">
+        An error occured: {error.message}
+      </div>
+    );
   return (
     <div className="w-1/5 p-2 ">
       <h1 className="text-3xl my-2 text-center">Product Details</h1>

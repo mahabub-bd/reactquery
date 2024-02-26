@@ -15,6 +15,7 @@ export default function ProductList({ onProductChange }) {
     queryFn: retrieveProducts,
   });
 
+  console.log(products, error, isLoading);
   const mutation = useMutation({
     mutationFn: deleteProduct,
     onSuccess: () => {
@@ -24,11 +25,19 @@ export default function ProductList({ onProductChange }) {
 
   const handleDeleteProduct = async (productId) => {
     await mutation.mutateAsync(productId);
-    console.log(productId);
   };
 
-  if (isLoading) return <div>Fetching Products ...</div>;
-  if (error) return <div>An error occours : {error.message}</div>;
+  if (isLoading)
+    return (
+      <div className="text-2xl text-center w-1/2">Fetching Products ...</div>
+    );
+
+  if (error)
+    return (
+      <div className=" text-2xl text-center  w-1/2">
+        An error occured: {error.message}
+      </div>
+    );
 
   return (
     <div className="flex flex-col justify-center items-center w-3/5 ">

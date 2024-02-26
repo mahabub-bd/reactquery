@@ -9,7 +9,7 @@ function App() {
     setProductId(Number(productId));
   };
   return (
-    <div className="flex m-2">
+    <div className="flex m-2 p-2">
       <AddProducts />
       <ProductList onProductChange={handleClick} />
       <ProductDetails id={productId} />

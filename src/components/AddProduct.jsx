@@ -44,11 +44,11 @@ export default function AddProducts() {
   }
 
   return (
-    <div className="w-1/5 h-1/2 m-2 p-2 bg-gray-100">
-      <h2 className="text-2xl my-2 text-center">Add Product</h2>
+    <div className="w-1/5 h-1/2 m-2 p-2">
+      <h2 className="text-2xl  text-center">Add Product</h2>
       {mutation.isSuccess && <p>Product is Added</p>}
       <form
-        className="flex flex-col m-2
+        className="flex flex-col m-2 p-4  bg-gray-100
       "
         onSubmit={handleSubmitData}
       >
