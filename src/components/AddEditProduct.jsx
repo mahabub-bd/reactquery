@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { postNewProduct, updateProduct } from "../queryFn";
 
-export default function AddProducts({ onEditData }) {
+export default function AddEditProducts({ onEditData }) {
   const queryClient = useQueryClient();
 
   const [state, setState] = useState({
