@@ -49,7 +49,7 @@ export default function ProductList({ onProductChange, onUpdate }) {
               className="flex flex-col items-center m-3 border rounded-sm"
             >
               <img
-                className="object-cover h-64 w-96 rounded-sm"
+                className="object-cover h-60 w-96 rounded-sm"
                 src={product.thumbnail}
                 alt={product.title}
               />
@@ -92,7 +92,7 @@ export default function ProductList({ onProductChange, onUpdate }) {
             </li>
           ))}
       </ul>
-      <div className="flex gap-20 justify-center items-center my-10 w-1/4">
+      <div className="flex gap-20 justify-center items-center my-5 w-1/4">
         {products.prev && (
           <button
             onClick={() => setPage(products.prev)}

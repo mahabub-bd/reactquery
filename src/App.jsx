@@ -8,7 +8,7 @@ function App() {
   const [editProduct, setEditProduct] = useState(null);
 
   const handleAddProduct = (productId) => {
-    setProductId(Number(productId));
+    setProductId(productId);
   };
 
   const handleUpdateProduct = (productData) => {
@@ -16,10 +16,10 @@ function App() {
   };
   return (
     <>
-      <h1 className="text-3xl text-center font-bold mt-5">
+      <h1 className="text-3xl text-center font-bold mb-5 p-4  text-gray-200 bg-slate-700 ">
         React CRUD Operation With Tanstack Query
       </h1>
-      <div className="flex m-2 p-2">
+      <div className="flex mt-2 p-2">
         <AddEditProducts onEditData={editProduct} />
         <ProductList
           onProductChange={handleAddProduct}
@@ -27,6 +27,9 @@ function App() {
         />
         <ProductDetails id={productId} />
       </div>
+      <p className="text-sm text-center font-thin p-1  text-gray-200 bg-slate-700 ">
+        React CRUD Operation With Tanstack Query
+      </p>
     </>
   );
 }

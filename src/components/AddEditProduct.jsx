@@ -5,13 +5,15 @@ import { postNewProduct, updateProduct } from "../queryFn";
 export default function AddEditProducts({ onEditData }) {
   const queryClient = useQueryClient();
 
-  const [state, setState] = useState({
+  const initialState = {
     title: "",
     description: "",
     price: 0,
     rating: 5,
     thumbnail: "",
-  });
+  };
+
+  const [state, setState] = useState(initialState);
 
   useEffect(() => {
     if (onEditData) {
@@ -34,6 +36,7 @@ export default function AddEditProducts({ onEditData }) {
       newData.id = crypto.randomUUID().toString();
     }
     mutation.mutate(newData);
+    setState(initialState);
   };
 
   const handleChange = (event) => {
