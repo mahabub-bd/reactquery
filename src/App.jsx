@@ -15,14 +15,19 @@ function App() {
     setEditProduct(productData);
   };
   return (
-    <div className="flex m-2 p-2">
-      <AddEditProducts onEditData={editProduct} />
-      <ProductList
-        onProductChange={handleAddProduct}
-        onUpdate={handleUpdateProduct}
-      />
-      <ProductDetails id={productId} />
-    </div>
+    <>
+      <h1 className="text-3xl text-center font-bold mt-5">
+        React CRUD Operation With Tanstack Query
+      </h1>
+      <div className="flex m-2 p-2">
+        <AddEditProducts onEditData={editProduct} />
+        <ProductList
+          onProductChange={handleAddProduct}
+          onUpdate={handleUpdateProduct}
+        />
+        <ProductDetails id={productId} />
+      </div>
+    </>
   );
 }
 

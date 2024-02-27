@@ -55,36 +55,36 @@ export default function ProductList({ onProductChange, onUpdate }) {
               />
               <div className="flex  items-center justify-around w-full">
                 <p className="text-lg my-3">{product.title}</p>
-                <p className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-0.5 px-2 rounded">
+                <p className="bg-gray-600 hover:bg-gray-700 text-white font-thin  px-2 rounded">
                   Rating: {product.rating}
                 </p>
               </div>
               <div className="flex items-center justify-around w-full my-4">
                 <button
                   onClick={() => onProductChange(product.id)}
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-0.5 px-2 rounded"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-thin  px-2 rounded"
                 >
                   Show Details
                 </button>
                 <button
                   onClick={() => handleDeleteProduct(product.id)}
-                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-0.5 px-2 rounded"
+                  className=" font-bold py-0.5 px-2 rounded"
                 >
                   <img
-                    width="22"
-                    height="22"
+                    width="24"
+                    height="24"
                     src="https://img.icons8.com/color/20/cancel--v1.png"
                     alt="cancel--v1"
                   />
                 </button>
                 <button
                   onClick={() => onUpdate(product)}
-                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-0.5 px-4 rounded"
+                  className=" font-bold py-0.5 px-4 rounded"
                 >
                   <img
-                    width="20"
-                    height="20"
-                    src="https://img.icons8.com/ios-glyphs/30/edit--v1.png"
+                    width="24"
+                    height="24"
+                    src="https://img.icons8.com/color/48/edit--v1.png"
                     alt="edit--v1"
                   />
                 </button>

@@ -58,7 +58,7 @@ export default function AddEditProducts({ onEditData }) {
       <h2 className="text-2xl  text-center">
         {onEditData ? "Edit Product" : "Add Product"}
       </h2>
-      {mutation.isSuccess && <p>Product {onEditData ? "Updated" : "Added"}</p>}
+
       <form
         className="flex flex-col m-2 p-4  bg-gray-100"
         onSubmit={handleSubmitData}
@@ -104,6 +104,11 @@ export default function AddEditProducts({ onEditData }) {
           {onEditData ? "Update Product" : "Add Product"}
         </button>
       </form>
+      {mutation.isSuccess && (
+        <p className="text-center">
+          Product {onEditData ? "Updated" : "Added"}
+        </p>
+      )}
     </div>
   );
 }
