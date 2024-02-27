@@ -4,19 +4,23 @@ import ProductDetails from "./components/ProductDetails";
 import ProductList from "./components/ProductList";
 
 function App() {
-  const [productId, setProductId] = useState(6);
+  const [productId, setProductId] = useState(1);
   const [editProduct, setEditProduct] = useState(null);
-  const handleClick = (productId) => {
+
+  const handleAddProduct = (productId) => {
     setProductId(Number(productId));
   };
 
-  const handleUpdateClick = (productData) => {
+  const handleUpdateProduct = (productData) => {
     setEditProduct(productData);
   };
   return (
     <div className="flex m-2 p-2">
       <AddProducts onEditData={editProduct} />
-      <ProductList onProductChange={handleClick} onUpdate={handleUpdateClick} />
+      <ProductList
+        onProductChange={handleAddProduct}
+        onUpdate={handleUpdateProduct}
+      />
       <ProductDetails id={productId} />
     </div>
   );

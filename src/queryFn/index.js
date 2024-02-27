@@ -22,8 +22,11 @@ const deleteProduct = (productId) => {
   return axios.delete(`http://localhost:3000/products/${productId}`);
 };
 
-const updateProduct = (productId, updatedData) => {
-  return axios.put(`http://localhost:3000/products/${productId}`, updatedData);
+const updateProduct = (updatedData) => {
+  return axios.put(
+    `http://localhost:3000/products/${updatedData.id}`,
+    updatedData
+  );
 };
 
 export {

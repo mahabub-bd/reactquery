@@ -24,9 +24,7 @@ export default function AddProducts({ onEditData }) {
     onSuccess: () => {
       queryClient.invalidateQueries(["products"]);
     },
-    mutationKey: onEditData
-      ? ["updateProduct", onEditData.id]
-      : "postNewProduct",
+    mutationKey: onEditData ? "updateProduct" : "postNewProduct",
   });
 
   const handleSubmitData = (event) => {
