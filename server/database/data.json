@@ -1,14 +1,6 @@
 {
   "products": [
     {
-      "id": "2",
-      "title": "iPhone X",
-      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-      "price": 899,
-      "rating": 4.44,
-      "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
-    },
-    {
       "id": "4",
       "title": "OPPOF19",
       "description": "OPPO F19 is officially announced on April 2021.",
@@ -239,6 +231,22 @@
       "price": 1000,
       "rating": 5,
       "thumbnail": "https://cdn.dummyjson.com/product-images/6/thumbnail.png"
+    },
+    {
+      "id": "d45539ea-b5e7-489b-a925-9a7d0609f0b8",
+      "title": "OPPOF21",
+      "description": "Mobile",
+      "price": 280,
+      "rating": 5,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
+    },
+    {
+      "id": "7df529a1-b291-4c05-b7d9-63a0e7f7080d",
+      "title": "OPPOF20",
+      "description": "",
+      "price": 280,
+      "rating": 5,
+      "thumbnail": "https://cdn.dummyjson.com/product-images/4/thumbnail.jpg"
     }
   ]
 }

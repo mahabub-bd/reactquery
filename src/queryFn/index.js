@@ -22,4 +22,14 @@ const deleteProduct = (productId) => {
   return axios.delete(`http://localhost:3000/products/${productId}`);
 };
 
-export { deleteProduct, postNewProduct, retrieveProducts, retriveProduct };
+const updateProduct = (productId, updatedData) => {
+  return axios.put(`http://localhost:3000/products/${productId}`, updatedData);
+};
+
+export {
+  deleteProduct,
+  postNewProduct,
+  retrieveProducts,
+  retriveProduct,
+  updateProduct,
+};

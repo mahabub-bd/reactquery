@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { deleteProduct, retrieveProducts } from "../queryFn";
 
-export default function ProductList({ onProductChange }) {
+export default function ProductList({ onProductChange, onUpdate }) {
   const queryclient = useQueryClient();
   const [page, setPage] = useState(1);
 
@@ -15,7 +15,6 @@ export default function ProductList({ onProductChange }) {
     queryFn: retrieveProducts,
   });
 
-  console.log(products, error, isLoading);
   const mutation = useMutation({
     mutationFn: deleteProduct,
     onSuccess: () => {
@@ -62,6 +61,12 @@ export default function ProductList({ onProductChange }) {
               </div>
               <div className="flex items-center justify-around w-full my-4">
                 <button
+                  onClick={() => onProductChange(product.id)}
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-0.5 px-2 rounded"
+                >
+                  Show Details
+                </button>
+                <button
                   onClick={() => handleDeleteProduct(product.id)}
                   className="bg-red-500 hover:bg-red-700 text-white font-bold py-0.5 px-2 rounded"
                 >
@@ -73,10 +78,15 @@ export default function ProductList({ onProductChange }) {
                   />
                 </button>
                 <button
-                  onClick={() => onProductChange(product.id)}
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-0.5 px-2 rounded"
+                  onClick={() => onUpdate(product)}
+                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-0.5 px-4 rounded"
                 >
-                  Show Details
+                  <img
+                    width="20"
+                    height="20"
+                    src="https://img.icons8.com/ios-glyphs/30/edit--v1.png"
+                    alt="edit--v1"
+                  />
                 </button>
               </div>
             </li>

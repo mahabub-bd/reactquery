@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useState } from "react";
-import { postNewProduct } from "../queryFn";
+import { useEffect, useState } from "react";
+import { postNewProduct, updateProduct } from "../queryFn";
 
-export default function AddProducts() {
+export default function AddProducts({ onEditData }) {
   const queryClient = useQueryClient();
 
   const [state, setState] = useState({
@@ -13,16 +13,28 @@ export default function AddProducts() {
     thumbnail: "",
   });
 
+  useEffect(() => {
+    if (onEditData) {
+      setState(onEditData);
+    }
+  }, [onEditData]);
+
   const mutation = useMutation({
-    mutationFn: postNewProduct,
+    mutationFn: onEditData ? updateProduct : postNewProduct,
     onSuccess: () => {
       queryClient.invalidateQueries(["products"]);
     },
+    mutationKey: onEditData
+      ? ["updateProduct", onEditData.id]
+      : "postNewProduct",
   });
 
   const handleSubmitData = (event) => {
     event.preventDefault();
-    const newData = { ...state, id: crypto.randomUUID().toString() };
+    const newData = { ...state };
+    if (!onEditData) {
+      newData.id = crypto.randomUUID().toString();
+    }
     mutation.mutate(newData);
   };
 
@@ -45,11 +57,12 @@ export default function AddProducts() {
 
   return (
     <div className="w-1/5 h-1/2 m-2 p-2">
-      <h2 className="text-2xl  text-center">Add Product</h2>
-      {mutation.isSuccess && <p>Product is Added</p>}
+      <h2 className="text-2xl  text-center">
+        {onEditData ? "Edit Product" : "Add Product"}
+      </h2>
+      {mutation.isSuccess && <p>Product {onEditData ? "Updated" : "Added"}</p>}
       <form
-        className="flex flex-col m-2 p-4  bg-gray-100
-      "
+        className="flex flex-col m-2 p-4  bg-gray-100"
         onSubmit={handleSubmitData}
       >
         <input
@@ -90,7 +103,7 @@ export default function AddProducts() {
           type="submit"
           className="bg-black m-auto text-white text-md py-1 px-4 mt-5 rounded-md w-full"
         >
-          Add Product
+          {onEditData ? "Update Product" : "Add Product"}
         </button>
       </form>
     </div>
